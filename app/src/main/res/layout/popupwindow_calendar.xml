@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_transparent" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/iamgeviewww"
+            android:layout_width="40dp"
+            android:layout_height="55dp"
+            android:src="@mipmap/jiantou"
+            android:background="#FE4040"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="选折日期"
+            android:textColor="#fff"
+            android:textSize="25sp"
+            android:background="#FE4040"
+            android:gravity="center"
+            android:layout_marginLeft="0dp"
+            android:paddingRight="200dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffeeeeee"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/popupwindow_calendar_last_month"
+                android:layout_width="70dp"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/popupwindow_calendar_month" >
+
+                <TextView
+                    android:layout_width="9dp"
+                    android:layout_height="14dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bt_calendar_last" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/popupwindow_calendar_month"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="#aa564b4b"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/popupwindow_calendar_next_month"
+                android:layout_width="70dp"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/popupwindow_calendar_month" >
+
+                <TextView
+                    android:layout_width="9dp"
+                    android:layout_height="14dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/bt_calendar_next" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#bbcc3333" />
+
+        <datepicker.KCalendar
+            android:id="@+id/popupwindow_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="320dp" >
+        </datepicker.KCalendar>
+
+        <Button
+            android:id="@+id/popupwindow_calendar_bt_enter"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ff00"
+            android:text="完成"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>
